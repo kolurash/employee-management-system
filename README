@@ -1,0 +1,249 @@
+# Employee Management System
+
+## 1. Project Overview
+
+The Employee Management System is a web-based application developed to manage employee information efficiently.
+
+It allows administrators and authorized users to add, view, update, search, filter, and manage employee records. The application also supports employee department transfers, transfer history, and role-based access.
+
+## 2. Objectives
+
+- Maintain employee information in a centralized system.
+- Generate employee codes automatically.
+- Validate employee details before saving.
+- Manage employee departments and roles.
+- Support employee transfers between departments.
+- Maintain transfer history.
+- Provide search, filtering, sorting, and pagination.
+- Implement role-based access control.
+
+## 3. Technologies Used
+
+### Frontend
+- HTML
+- CSS
+- JavaScript
+
+### Backend
+- Java
+- Spring Boot
+- Spring Data JPA
+- REST API
+
+### Database
+- MySQL
+
+### Development Tools
+- Visual Studio Code
+- Maven
+- MySQL Workbench
+- Git and GitHub
+
+## 4. Features
+
+### Employee Management
+- Add new employees.
+- View employee details.
+- Update employee information.
+- Delete employee records.
+- Generate employee codes automatically.
+
+### Employee Information
+The application manages the following employee details:
+
+- Employee ID
+- Employee Code
+- Full Name
+- Email
+- Mobile Number
+- Aadhaar Number
+- PAN Number
+- Date of Birth
+- Gender
+- Address
+- Department
+- Role
+- Joining Date
+- Annual Salary
+- Employee Status
+
+### Search and Filtering
+- Search employees using supported employee information.
+- Filter employees by department.
+- Filter employees by role.
+- Filter employees by status.
+- Filter employees by gender.
+
+### Sorting and Pagination
+- Sort employee records.
+- Display records in ascending or descending order.
+- Support pagination.
+- Select the number of records displayed per page.
+
+### Department Transfer
+- Transfer employees between departments.
+- Update employee department information.
+- Maintain employee transfer history.
+- Preserve employee identity during transfers.
+
+### Role-Based Access
+The application supports different user roles:
+
+- Admin
+- HR
+- Manager
+- Employee
+
+Access to employee information and operations depends on the permissions configured for each role.
+
+### Validation
+The application validates employee information, including:
+
+- Required fields.
+- Email format.
+- Mobile number.
+- Aadhaar number.
+- PAN format.
+- Date of Birth.
+- Salary.
+- Employee information before saving.
+
+## 5. Project Structure
+
+```text
+employee-management/
+│
+├── src/
+│   └── main/
+│       ├── java/
+│       │   └── com/
+│       │       └── employee/
+│       │           └── employee_management/
+│       │
+│       └── resources/
+│           └── application.properties
+│
+├── frontend/
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+│
+├── pom.xml
+├── mvnw
+├── mvnw.cmd
+└── README.md
+```
+
+## 6. Database
+
+Database Name:
+
+`employee_management`
+
+The application uses MySQL to store employee information.
+
+Employee records and related information are maintained in the database.
+
+## 7. Installation and Setup
+
+### Prerequisites
+
+Install the following:
+
+- Java JDK
+- MySQL
+- Maven
+- Python
+- Visual Studio Code
+
+### Step 1: Configure MySQL
+
+Create the database:
+
+```sql
+CREATE DATABASE employee_management;
+```
+
+Configure the database connection in:
+
+`src/main/resources/application.properties`
+
+Update the database URL, username, and password according to your MySQL configuration.
+
+### Step 2: Start the Backend
+
+Open PowerShell in the project directory:
+
+```powershell
+cd "C:\Users\Rashmitha\OneDrive\Desktop\employee-management"
+```
+
+Run the Spring Boot application:
+
+```powershell
+.\mvnw.cmd spring-boot:run
+```
+
+Backend URL:
+
+`http://localhost:8080`
+
+### Step 3: Start the Frontend
+
+Open another PowerShell terminal:
+
+```powershell
+cd "C:\Users\Rashmitha\OneDrive\Desktop\employee-management\frontend"
+```
+
+Start the frontend server:
+
+```powershell
+python -m http.server 5500 --bind 127.0.0.1
+```
+
+Open the application in your browser:
+
+`http://127.0.0.1:5500/`
+
+Keep both backend and frontend servers running while using the application.
+
+## 8. Application Testing
+
+The application was tested for the following operations:
+
+- Adding employee records.
+- Viewing employee records.
+- Updating employee details.
+- Deleting employee records.
+- Searching employees.
+- Filtering employee records.
+- Sorting employee records.
+- Pagination.
+- Department transfer.
+- Transfer history.
+- Employee data persistence after backend restart.
+- Role-based access for Admin, HR, Manager, and Employee.
+
+## 9. Future Enhancements
+
+- Improve employee reporting.
+- Add dashboard analytics.
+- Enhance employee data security.
+- Improve application performance.
+- Add additional employee management features.
+
+## 10. Conclusion
+
+The Employee Management System provides a centralized platform for managing employee information.
+
+It helps simplify employee record management, department transfers, employee searches, and access control through a web-based application.
+
+The project demonstrates the use of Java, Spring Boot, MySQL, HTML, CSS, and JavaScript in developing an employee management application.
+
+---
+
+**Project:** Employee Management System  
+**Backend:** Spring Boot  
+**Frontend:** HTML, CSS, JavaScript  
+**Database:** MySQL

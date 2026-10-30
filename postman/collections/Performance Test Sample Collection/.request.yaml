@@ -1,0 +1,26 @@
+$kind: http-request
+name: ""
+url: http://localhost:8080/api/employees
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"fullName\": \"Ravi Kumar\",\r
+
+    \  \"email\": \"ravi@example.com\",\r
+
+    \  \"mobile\": \"9876543210\",\r
+
+    \  \"departmentId\": 1,\r
+
+    \  \"roleId\": 1,\r
+
+    \  \"joiningDate\": \"2026-01-15\",\r
+
+    \  \"annualSalary\": 500000,\r
+
+    \  \"employeeStatus\": \"Active\"\r
+
+    }"
+order: 1000
