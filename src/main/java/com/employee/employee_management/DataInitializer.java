@@ -132,51 +132,50 @@ public class DataInitializer {
         };
     }
 
-    private void createUser(
-            AppUserRepository repository,
-            PasswordEncoder encoder,
-            String email,
-            String password,
-            String role) {
-
-        if (repository.findByEmail(email).isEmpty()) {
-
+    
+     private void createUser(AppUserRepository userRepository, PasswordEncoder passwordEncoder,
+                            String email, String password, String role) {
+        if (userRepository.findByEmail(email).isEmpty()) {
             AppUser user = new AppUser();
-
             user.setEmail(email);
-            user.setPassword(encoder.encode(password));
+            user.setPassword(passwordEncoder.encode(password));
             user.setRole(role);
-
-            repository.save(user);
+            userRepository.save(user);
         }
     }
 
     private void createEmployee(
-            EmployeeRepository repository,
-            String employeeCode,
-            String fullName,
-            String email,
-            String mobile,
-            Integer departmentId,
-            Integer roleId,
-            LocalDate joiningDate,
-            double annualSalary) {
+        EmployeeRepository repository,
+        String employeeCode,
+        String fullName,
+        String email,
+        String mobile,
+        Integer departmentId,
+        Integer roleId,
+        LocalDate joiningDate,
+        double annualSalary) {
 
-        if (repository.findByEmail(email).isEmpty()) {
+    if (repository.findByEmail(email).isEmpty()) {
 
-            Employee employee = new Employee();
+        Employee employee = new Employee();
 
-            employee.setEmployeeCode(employeeCode);
-            employee.setFullName(fullName);
-            employee.setEmail(email);
-            employee.setMobile(mobile);
-            employee.setDepartmentId(departmentId);
-            employee.setRoleId(roleId);
-            employee.setJoiningDate(joiningDate);
-            employee.setAnnualSalary(annualSalary);
-            employee.setEmployeeStatus("ACTIVE");
+        employee.setEmployeeCode(employeeCode);
+        employee.setFullName(fullName);
+        employee.setEmail(email);
+        employee.setMobile(mobile);
+        employee.setDepartmentId(departmentId);
+        employee.setRoleId(roleId);
+        employee.setJoiningDate(joiningDate);
+        employee.setAnnualSalary(annualSalary);
+        employee.setEmployeeStatus("ACTIVE");
 
-            repository.save(employee);
-        }
+        employee.setAadhaarNumber("123456789012");
+        employee.setPanNumber("ABCDE1234F");
+        employee.setDateOfBirth(LocalDate.of(2000, 1, 1));
+        employee.setGender("OTHER");
+        employee.setAddress("Hyderabad, Telangana");
+
+        repository.save(employee);
     }
+}
 }
